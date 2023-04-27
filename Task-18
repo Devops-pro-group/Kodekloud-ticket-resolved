@@ -7,15 +7,19 @@ If you can't explain it simply you don't understand it well enough.
 
 Task:
 -----
-There was some users data copied on Nautilus App Server 1 at /home/usersdata location by the Nautilus production support team in Stratos DC. Later they found that they mistakenly mixed up different user data there. Now they want to filter out some user data and copy it to another location. Find the details below:
+There was some users data copied on Nautilus App Server 1 at /home/usersdata location by the Nautilus production support team in Stratos DC. 
+Later they found that they mistakenly mixed up different user data there. Now they want to filter out some user data and copy it to 
+another location. Find the details below:
 
-On App Server 1 find all files (not directories) owned by user kareem inside /home/usersdata directory and copy them all while keeping the folder structure (preserve the directories path) to /official directory.
+On App Server 1 find all files (not directories) owned by user kareem inside /home/usersdata directory and copy them all while keeping
+the folder structure (preserve the directories path) to /official directory.
 
 
 
 Resolution:
 ===========
-To find all files owned by user kareem inside the /home/usersdata directory on App Server 1 and copy them to the /official directory while preserving the directory structure, you can use the find and cp commands.
+To find all files owned by user kareem inside the /home/usersdata directory on App Server 1 and copy them to the /official directory
+while preserving the directory structure, you can use the find and cp commands.
 
 Here is an example command you can use:
 
@@ -53,19 +57,23 @@ Here is an example command to find a file named "example.txt" on the entire syst
 - find / -name example.txt                   # for file
 
 
-This command will start the search at the root directory ("/") and search all directories and subdirectories for a file named "example.txt". The command will output the path of the file if it is found.
+This command will start the search at the root directory ("/") and search all directories and subdirectories for a file named "example.txt".
+The command will output the path of the file if it is found.
 
-If you know the general location of the file, you can restrict the search to a specific directory or path. For example, to search for the file only in the /home directory, you can use the following command:
+If you know the general location of the file, you can restrict the search to a specific directory or path. For example, to search for the 
+file only in the /home directory, you can use the following command:
 
 
 - find /home -name example.txt
 
-You can also use the locate command to find files on the system. However, the locate command requires a pre-built database of files to be created and updated regularly. To use the locate command to find a file named "example.txt", you can run the following command:
+You can also use the locate command to find files on the system. However, the locate command requires a pre-built database of files to be
+created and updated regularly. To use the locate command to find a file named "example.txt", you can run the following command:
 
 
 - locate example.txt
 
-This command will search the pre-built database of files and output any matching file paths. However, the database may not be up-to-date, so it is recommended to use the find command for more accurate results.
+This command will search the pre-built database of files and output any matching file paths. However, the database may not be up-to-date, 
+so it is recommended to use the find command for more accurate results.
 
 =======================================================================================================
 
@@ -76,9 +84,11 @@ Here is an example command to find a directory named "exampledir" on the entire 
 
 - find / -type d -name exampledir
 
-This command will start the search at the root directory ("/") and search all directories and subdirectories for a directory named "exampledir". The command will output the path of the directory if it is found.
+This command will start the search at the root directory ("/") and search all directories and subdirectories for a directory named "exampledir".
+The command will output the path of the directory if it is found.
 
-If you know the general location of the directory, you can restrict the search to a specific directory or path. For example, to search for the directory only in the /home directory, you can use the following command:
+If you know the general location of the directory, you can restrict the search to a specific directory or path. For example,
+to search for the directory only in the /home directory, you can use the following command:
 
 
 - find /home -type d -name exampledir
