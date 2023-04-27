@@ -7,7 +7,8 @@ You are never too old to set another goal or to dream a new dream.
 
 Task:
 -----
-Some users of the monitoring app have reported issues with xFusionCorp Industries mail server. They have a mail server in Stork DC where they are using postfix mail transfer agent. Postfix service seems to fail. Try to identify the root cause and fix it.
+Some users of the monitoring app have reported issues with xFusionCorp Industries mail server. They have a mail server in Stork 
+DC where they are using postfix mail transfer agent. Postfix service seems to fail. Try to identify the root cause and fix it.
 
 Resolution:
 -----------
@@ -38,7 +39,9 @@ Apr 21 14:44:26 stmail01.stratos.xfusioncorp.com systemd[1]: postfix.service: Un
 Solution:
 ----------
 
-if you are seeing an error message "Job for postfix.service failed because the control process exited with error code" when trying to start the Postfix mail service, it means that the service failed to start due to some issue. Here are some steps you can follow to troubleshoot and resolve the issue:
+if you are seeing an error message "Job for postfix.service failed because the control process exited with error code" when trying
+to start the Postfix mail service, it means that the service failed to start due to some issue. Here are some steps you can follow
+to troubleshoot and resolve the issue:
 
 Check the Postfix service status: Run the following command to check the status of the Postfix service:
 sudo systemctl status postfix
@@ -50,7 +53,7 @@ at /etc/postfix/main.cf.
 i found that :
 inet_interfaces = localhost
 
-I change it to all :
+I changed it to all :
 
 inet_interfaces = all 
 service postfix restart
@@ -63,8 +66,11 @@ sudo postfix check
 
 This command will check the Postfix configuration file for any errors and provide feedback if it finds any.
 
-Check system logs: System logs can often provide clues as to why a service failed to start. Check the system logs for any messages related to the Postfix service. On most Linux systems, system logs are located in the /var/log directory. You can view the logs by running the following command:
+Check system logs: System logs can often provide clues as to why a service failed to start. Check the system logs for any messages
+related to the Postfix service. On most Linux systems, system logs are located in the /var/log directory. You can view the logs by running the following command:
+
 sudo tail -f /var/log/syslog
+
 This will display the last few lines of the syslog, including any messages related to the Postfix service.
 
 Restart the server: If all else fails, try restarting the server to see if this resolves the issue. Run the following command to restart the server:
