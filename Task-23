@@ -1,0 +1,20 @@
+Task-23:
+==================================
+
+Always bear in mind that your own resolution to success is more important than any other one thing.
+
+– Abraham Lincoln
+
+
+Neither comprehension nor learning can take place in an atmosphere of anxiety.
+
+– Rose Kennedy
+
+Task:
+------
+
+We have some users on all app servers in Stratos Datacenter. Some of them have been assigned some new roles and responsibilities, therefore their users need to be upgraded with sudo access so that they can perform admin level tasks.
+
+a. Provide sudo access to user rose on all app servers.
+
+b. Make sure you have set up password-less sudo for the user.
